@@ -1,7 +1,27 @@
 /* eslint-disable linebreak-style */
 import React from "react";
-import {Button, Input} from '../components';
+import {Button, Option} from '../components';
 export const StepTwo = () => {
+
+  const answers = [
+    {
+      id: '8f5ced48-da99-477f-aa62-889eca67ce57',
+      answer: 'Ваш ответ'
+    },
+    {
+      id: '4639c91d-0dc1-4b31-a7a4-b5b66d7584d3',
+      answer: 'Ваш ответ'
+    },
+    {
+      id: 'bdc14d39-df17-402c-a332-5037ee1c7e35',
+      answer: 'Ваш ответ'
+    },
+    {
+      id: '4c40902d-bc82-479c-a690-0386c8811ad8',
+      answer: 'Ваш ответ'
+    }
+  ]
+
   return (
     <div className="container">
       <div className="wrapper">
@@ -23,22 +43,9 @@ export const StepTwo = () => {
           <div className="question">
             <h2>1. Занимательный вопрос</h2>
             <ul className="variants">
-              <li className="variant-wrapper">
-              <Input InputType="radio" InputName="variant-1" InputID="variant-1"/>
-              <label htmlFor="variant-1">Ваш ответ</label>
-              </li>
-              <li className="variant-wrapper">
-              <Input InputType="radio" InputName="variant-2" InputID="variant-2"/>
-              <label htmlFor="variant-2">Ваш ответ</label>
-              </li>
-              <li className="variant-wrapper">
-              <Input InputType="radio" InputName="variant-3" InputID="variant-3"/>
-              <label htmlFor="variant-3">Ваш ответ</label>
-              </li>
-              <li className="variant-wrapper">
-                <Input InputType="radio" InputName="variant-4" InputID="variant-4"/>
-                <label htmlFor="variant-4">Ваш ответ</label>
-              </li>
+              {answers.map(({ id, answer }) => (
+                <Option id={id} answer={answer} />
+            ))}
             </ul>
             <Button BtnType="button"disabled BtnId="next-btn" text="Далее"/>
           </div>

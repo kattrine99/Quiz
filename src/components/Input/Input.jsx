@@ -1,18 +1,18 @@
 import React from 'react'
 
-export const Input = ({InputTxt,InputType , InputName,InputID, InputPlaceholder, InputPattern, SpanErrorMessage}) => {
+export const Input = ({InputTxt,InputType,InputID, InputPlaceholder, InputPattern, ErrorMessage}) => {
   return (
-    <label className="input-wrapper" htmlFor="username">
+    <label className="input-wrapper" htmlFor={InputID}>
               {InputTxt}
               <input
                 required
                 type={InputType}
-                name={InputName}
+                name={InputID}
                 id={InputID}
                 placeholder={InputPlaceholder}
                 pattern={InputPattern}
               />
-              <span id="error-message">{SpanErrorMessage}</span>
+              <span id="error-message">{ErrorMessage}</span>
             </label>
   )
 }
