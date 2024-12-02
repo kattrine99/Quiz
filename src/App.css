@@ -1,0 +1,47 @@
+/* Общий стиль переключателя */
+.toggle-switch {
+    width: 60px;
+    height: 30px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    padding: 5px;
+    transition: background-color 0.3s, border 0.3s;
+  }
+  
+  /* Стиль для светлой темы */
+  .toggle-switch.light {
+    background-color: #e0e0e0; /* Серый фон */
+    border: 2px solid #cccccc; /* Светлый бордер */
+  }
+  
+  /* Стиль для тёмной темы */
+  .toggle-switch.dark {
+    background-color: #000000; /* Чёрный фон */
+    border: 2px solid #ffffff; /* Белый бордер */
+  }
+  
+  /* Внутренний шарик */
+  .toggle-switch .switch {
+    width: 20px;
+    height: 20px;
+    background-color: #000; /* По умолчанию чёрный (для светлой темы) */
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.3s, background-color 0.3s;
+  }
+  
+  /* Положение и цвет шарика в светлой теме */
+  .toggle-switch.light .switch {
+    transform: translateX(0px);
+    background-color: #000000;
+  }
+  
+  /* Положение и цвет шарика в тёмной теме */
+  .toggle-switch.dark .switch {
+    transform: translateX(25px);
+    background-color: #ffffff;
+  }
+  

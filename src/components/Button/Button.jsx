@@ -1,6 +1,6 @@
-export const Button = ({ text, BtnType, BtnId }) => {
+export const Button = ({ text, type, id, ...props }) => {
   return (
-    <button type={BtnType} id={BtnId}>
+    <button type={type} id={id} {...props}>
       {text}
     </button>
   );

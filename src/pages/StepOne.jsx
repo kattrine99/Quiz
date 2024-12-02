@@ -6,12 +6,12 @@ export const StepOne = () => {
       <div className="question">
         <h2>1. Занимательный вопрос</h2>
         <Input
-          InputType="text"
-          InputName="answer"
-          InputPlaceholder="Ваш ответ"
-          SpanErrorMessage="Введите номер в правильном формате"
+          type="text"
+          name="answer"
+          placeholder="Ваш ответ"
+          errorMessage="Введите номер в правильном формате"
         />
-        <Button BtnType="button" disabled BtnId="next-btn" text="Далее" />
+        <Button type="button" id="next-btn" text="Далее" disabled />
       </div>
     </div>
   );

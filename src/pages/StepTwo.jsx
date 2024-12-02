@@ -1,15 +1,23 @@
-/* eslint-disable linebreak-style */
-import React from "react";
-import { Button, ListOfInputs } from "../components";
+import { Button, Input } from "../components";
+import { YourAnswers } from "../constants";
 export const StepTwo = () => {
   return (
     <div className="variants-quiz">
       <div className="question">
-        <h2>1. Занимательный вопрос</h2>
+        <h2>2. Занимательный вопрос</h2>
         <ul className="variants">
-          <ListOfInputs variant={4} />
+          {YourAnswers.map((ans, index) => {
+            return (<li className="variant-wrapper" key={index}>
+              <Input
+                type="radio"
+                name={`variant-${index}`}
+                id={`variant-${index}`}
+              />
+              <label htmlFor={`variant-${index}`}>{ans}</label>
+            </li>)
+          })}
         </ul>
-        <Button BtnType="button" disabled BtnId="next-btn" text="Далее" />
+        <Button type="button" id="next-btn" text="Далее" disabled />
       </div>
     </div>
   );
