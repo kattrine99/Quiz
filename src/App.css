@@ -45,3 +45,9 @@
     background-color: #ffffff;
   }
   
+  .nav-class {
+    display: flex;
+    margin-left: auto;
+    padding: 20px;
+  }
+  
