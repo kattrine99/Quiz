@@ -14,6 +14,7 @@ import {
 import "./App.css";
 import "./styles/main.css";
 import { ThemeContext } from "./context/ThemeContext";
+import { ThemeToggle } from "./components/ThemeToggle/ThemeToggle";
 
 export const App = () => {
   const [theme, setTheme] = useState()
@@ -52,12 +53,7 @@ export const App = () => {
   
   return (
     <ThemeContext.Provider value={theme}>
-      <nav style={{ display: "flex",marginLeft: 'auto', padding: "20px" }}>
-        <div className={`toggle-switch ${theme}`}
-    onClick={() => setTheme(theme === "light" ? "dark" : "light")}>
-          <div className={'switch'} />
-        </div>
-      </nav>
+      <ThemeToggle setTheme={setTheme}/>
       <Routes>
         <Route index element={<Welcome />} />
         <Route path="/step" element={<Step />}>
