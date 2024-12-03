@@ -1,6 +1,5 @@
 import React, { useContext } from "react";
-import { ThemeContext } from "./context/ThemeContext";
-
+import { ThemeContext } from "../../context/ThemeContext";
 export const ThemeToggle = ({ setTheme }) => {
   const theme = useContext(ThemeContext);
 
@@ -9,7 +8,7 @@ export const ThemeToggle = ({ setTheme }) => {
       <div
         className={`toggle-switch ${theme}`}
         onClick={() => setTheme(theme === "light" ? "dark" : "light")}>
-        <div className="switch" /> []`12985432\`
+        <div className="switch" /> 
       </div>
     </nav>
   );
